@@ -41,6 +41,18 @@ function startGame(max, min) {
     alert("Error!");
   }
 }
+function startGameID(max, min) {
+  var a = document.getElementById(max)
+  var b = document.getElementById(min)
+  startGame(a, b)
+}
+function startGameAutomatically() {
+  var maxResult = "0";
+  var minResult = "0";
+  maxResult = window.prompt("Max number: ", "0");
+  minResult = window.prompt("Min number: ", "0");
+  startGame(maxResult, minResult);
+}
 </script>
 <h1>Guess the number</h1>
 

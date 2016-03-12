@@ -1,2 +1,28 @@
 <script>
+var n = 0;
+var game = false;
+function guess(guessn){
+  if (game == true) {
+    if (guessn > n){
+     alert("Lower"); //The guess is larger than the correct number
+   }
+    if (guessn == n) {
+      alert("Correct!"); //The number is the same as the correct number
+      game = false; //Done
+    }
+    if (guessn < n){
+     alert("Higher!"); //The number is smaller than the correct number
+   }
+  }
+  if (game == false) {
+    aler("The game is not started.");
+  }
+}
+function guessID(id){
+  
+}
+function startGame() {
+  game = true;
+}
 </script>
+<h1>Guess the number</h1>

@@ -21,7 +21,7 @@ function guess(guessn){
 function guessID(id){
   
 }
-function startGame(max, min) {
+function startGame(min, max) {
   var response = "0";
   var xmlHttp = new XMLHttpRequest();
   url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max).concat("&col=1&base=10&format=plain&rnd=new");
@@ -42,7 +42,7 @@ function startGame(max, min) {
     alert("Error!");
   }
 }
-function startGameID(max, min) {
+function startGameID(min, max) {
   var a = document.getElementById(max)
   var b = document.getElementById(min)
   startGame(a, b)
@@ -52,7 +52,7 @@ function startGameAutomatically() {
   var minResult = "0";
   maxResult = window.prompt("Max number: ", "0");
   minResult = window.prompt("Min number: ", "0");
-  startGame(maxResult, minResult);
+  startGame(minResult, maxResult);
 }
 </script>
 <h1>Guess the number</h1>

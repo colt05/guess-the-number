@@ -49,7 +49,7 @@ function startGame(min, max) {
   n = n.replace(/(\r\n|\n|\r)/gm,"");
   game = true;
   try{
-    if (isNumber(response) == true) {
+    if (isNumber(n) == true) {
       game = true;
       document.write("Game started!\n");
       //Add textbox and guess button
@@ -59,9 +59,9 @@ function startGame(min, max) {
       game = false;
       alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");
       if (response == null) {
-        console.log("response is null");
+        console.log("n is null");
       } else {
-        console.log("response is ".concat(response));
+        console.log("n is ".concat(n));
       }
       }
   } catch(err){

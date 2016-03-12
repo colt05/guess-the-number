@@ -1,6 +1,17 @@
 <script>
 var n = 0;
 var game = false;
+function isNumber(value) {
+  try{
+  if (isFinite(Number(response)) == true) {
+    return true;
+  } else {
+    return false;
+  }
+  } catch(err) {
+    return false;
+  }
+}
 function guess(guessn){
   if (game == true) {
     if (guessn > n){
@@ -22,7 +33,7 @@ function restart(){
   window.location.assign("http://colt05.github.io/guess-the-number/redirect.html")
 }
 function guessID(id){
-  
+  guess(document.getElementById(id).value);
 }
 function startGame(min, max) {
   var response = "0";
@@ -34,9 +45,12 @@ function startGame(min, max) {
   n = response;
   game = true;
   try{
-    if (isFinite(Number(response)) == true) {
+    if (isNumber(response) == true) {
       game = true;
       document.write("Game started!\n");
+      //Add textbox and guess button
+      document.write("<input type=\"text\" name=\"num\" id=\"v\"><br>")
+      document.write("<button onclick=\"guessID(\"v\")\" value=\"Guess\">Guess</button>\n")
     } else {
       game = false;
       alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");

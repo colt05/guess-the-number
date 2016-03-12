@@ -43,6 +43,7 @@ function startGame(min, max) {
   xmlHttp.send( null );
   response = xmlHttp.responseText;
   n = response;
+  response = response.replace(/(\r\n|\n|\r)/gm,"");
   game = true;
   try{
     if (isNumber(response) == true) {

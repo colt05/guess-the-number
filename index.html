@@ -34,7 +34,7 @@ function restart(){
   window.location.assign("http://colt05.github.io/guess-the-number/redirect.html")
 }
 function guessID(id){
-  guess(document.getElementById(id).value);
+  guess(Number(document.getElementById(id).value));
 }
 function guessForm() {
   guessID("v");

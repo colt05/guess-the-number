@@ -23,6 +23,7 @@ function guessID(id){
 }
 function startGame(max, min) {
   var response = "0";
+  var xmlHttp = new XMLHttpRequest();
   url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max).concat("&col=1&base=10&format=plain&rnd=new");
   xmlHttp.open( "GET", url, false );
   xmlHttp.send( null );

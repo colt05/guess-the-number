@@ -32,7 +32,7 @@ function startGame(min, max) {
   try{
     if (isFinite(Number(response)) == true) {
       game = true;
-      document.write("Game started!");
+      document.write("Game started!\n");
     } else {
       game = false;
       alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");
@@ -40,6 +40,7 @@ function startGame(min, max) {
   }
   catch(err){
     alert("Error!");
+    console.log(err.message);
   }
 }
 function startGameID(min, max) {

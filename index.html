@@ -4,18 +4,18 @@ var game = false;
 function guess(guessn){
   if (game == true) {
     if (guessn > n){
-     alert("Lower"); //The guess is larger than the correct number
+     alert("Lower!"); //The guess is larger than the correct number
    }
-    if (guessn == n) {
-      alert("Correct!"); //The number is the same as the correct number
-      game = false; //Done
-    }
     if (guessn < n){
      alert("Higher!"); //The number is smaller than the correct number
    }
   }
   if (game == false) {
     alert("The game is not started.");
+  }
+  if (guessn == n) {
+    alert("Correct!"); //The number is the same as the correct number
+    game = false; //Done
   }
 }
 function guessID(id){
@@ -28,6 +28,7 @@ function startGame(min, max) {
   xmlHttp.open( "GET", url, false );
   xmlHttp.send( null );
   response = xmlHttp.responseText;
+  n = response;
   game = true;
   try{
     if (isFinite(Number(response)) == true) {
@@ -57,5 +58,4 @@ function startGameAutomatically() {
 }
 </script>
 <h1>Guess the number</h1>
-
 <button onClick="startGameAutomatically()" value="Start Game">Start Game</button>

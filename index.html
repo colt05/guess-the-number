@@ -35,6 +35,9 @@ function restart(){
 function guessID(id){
   guess(document.getElementById(id).value);
 }
+function guessForm() {
+  guessID("v")
+}
 function startGame(min, max) {
   var response = "0";
   var xmlHttp = new XMLHttpRequest();
@@ -51,7 +54,7 @@ function startGame(min, max) {
       document.write("Game started!\n");
       //Add textbox and guess button
       document.write("<input type=\"text\" name=\"num\" id=\"v\"><br>")
-      document.write("<button onclick=\"guessID(\"v\")\" value=\"Guess\">Guess</button>\n")
+      document.write("<button onclick=\"guessForm()\" value=\"Guess\">Guess</button>\n")
     } else {
       game = false;
       alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");

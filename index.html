@@ -23,7 +23,7 @@ function guessID(id){
 }
 function startGame(max, min) {
   var response = "0";
-  url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max)concat("&col=1&base=10&format=plain&rnd=new");
+  url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max).concat("&col=1&base=10&format=plain&rnd=new");
   xmlHttp.open( "GET", url, false );
   xmlHttp.send( null );
   response = xmlHttp.responseText;
@@ -56,4 +56,4 @@ function startGameAutomatically() {
 </script>
 <h1>Guess the number</h1>
 
-<button onClick="startGameID()" value="Start Game">Start Game</button>
+<button onClick="startGameAutomatically()" value="Start Game">Start Game</button>

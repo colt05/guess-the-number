@@ -15,14 +15,33 @@ function guess(guessn){
    }
   }
   if (game == false) {
-    aler("The game is not started.");
+    alert("The game is not started.");
   }
 }
 function guessID(id){
   
 }
-function startGame() {
+function startGame(max, min) {
+  var response = "0";
+  url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max)concat("&col=1&base=10&format=plain&rnd=new");
+  xmlHttp.open( "GET", url, false );
+  xmlHttp.send( null );
+  response = xmlHttp.responseText;
   game = true;
+  try{
+    if (isFinite(Number(response)) == true) {
+      game = true;
+      document.write("Game started!");
+    } else {
+      game = false;
+      alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");
+    }
+  }
+  catch(err){
+    alert("Error!");
+  }
 }
 </script>
 <h1>Guess the number</h1>
+
+<button onClick="startGameID()" value="Start Game"></button>

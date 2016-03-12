@@ -36,7 +36,7 @@ function guessID(id){
   guess(document.getElementById(id).value);
 }
 function guessForm() {
-  guessID("v")
+  guessID("v");
 }
 function startGame(min, max) {
   var response = "0";
@@ -58,6 +58,12 @@ function startGame(min, max) {
     } else {
       game = false;
       alert("Response from RANDOM.org was not a number, or you did not input a number. Try again later.");
+      if (response == null) {
+        console.log("response is null");
+      } else {
+        console.log("response is ".concat(response));
+      }
+      }
     }
   }
   catch(err){

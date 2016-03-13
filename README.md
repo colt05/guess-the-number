@@ -8,4 +8,5 @@ http://stackoverflow.com/questions/3559063/how-to-enter-quotes-in-a-java-string
 http://www.textfixer.com/tutorials/javascript-line-breaks.php  
 http://stackoverflow.com/questions/11609376/passing-data-between-html-pages  
 http://diveintohtml5.info/storage.html  
+https://modernizr.com/  
 Google Chrome Developer Tools  

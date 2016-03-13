@@ -28,7 +28,12 @@ function guess(guessn){
     guesses = 0;
   }
   if (guessn == n) {
-    alert("Correct! You had ".concat(guesses).concat(" guesses!")); //The number is the same as the correct number
+    if (guesses == 1) {
+      alert("Correct! You had ".concat(guesses).concat(" guess!")); //The number is the same as the correct number
+    } else {
+      alert("Correct! You had ".concat(guesses).concat(" guesses!")); //The number is the same as the correct number
+    }
+    
     game = false; //Done
     restart();
   }

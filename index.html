@@ -34,13 +34,20 @@ function guess(guessn){
     } else {
       alert("Correct! You had ".concat(guesses).concat(" guesses!")); //The number is the same as the correct number
     }
-    
     game = false; //Done
     restart();
   }
 }
 function restart(){
-  window.location.assign("http://colt05.github.io/guess-the-number/redirect.html")
+  if (Modernizr.localstorage) {
+    window.localStorage.setItem("g", guesses);
+    window.localStorage.setItem("n", n);
+    window.location.assign("http://colt05.github.io/guess-the-number/redirect.html");
+  } else {
+    window.location.assign("http://colt05.github.io/guess-the-number/redirect2.html");
+  }
+}
+  
 }
 function guessID(id){
   guess(Number(document.getElementById(id).value));

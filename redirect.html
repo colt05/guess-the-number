@@ -5,9 +5,9 @@ try{
   if (window.localStorage.getItem("n") == null && window.localStorage.getItem("g") == null){
   } else {
     if (window.localStorage.getItem("g") == 1){
-        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guess!"));
+        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").concat(window.localStorage.getItem("g").concat(" guess!")));
       } else {
-        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guesses!"));
+        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").concat(window.localStorage.getItem("g").concat(" guesses!")));
     }
   }
   } catch(err) {

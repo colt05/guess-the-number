@@ -1,6 +1,7 @@
 <script>
 var n = 0;
 var game = false;
+var guesses = 0;
 function isNumber(value) {
   try{
   if (isFinite(Number(value)) == true) {
@@ -14,6 +15,7 @@ function isNumber(value) {
 }
 function guess(guessn){
   if (game == true) {
+    guesses = guesses + 1;
     if (guessn > n){
      alert("Lower!"); //The guess is larger than the correct number
    }
@@ -23,9 +25,10 @@ function guess(guessn){
   }
   if (game == false) {
     alert("The game is not started.");
+    guesses = 0;
   }
   if (guessn == n) {
-    alert("Correct!"); //The number is the same as the correct number
+    alert("Correct! You had ".concat(guesses).concat(" guesses!")); //The number is the same as the correct number
     game = false; //Done
     restart();
   }

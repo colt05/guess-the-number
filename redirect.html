@@ -1,5 +1,11 @@
 <title>Restart Game</title>
 <script>
+function go() {
+  window.location.assign("http://colt05.github.io/guess-the-number");
+}
+</script>
+<p id="s"></p>
+<script>
 function g() {
 try{
   if (window.localStorage.getItem("n") == null && window.localStorage.getItem("g") == null){
@@ -15,9 +21,5 @@ try{
   }
 }
 g()
-function go() {
-  window.location.assign("http://colt05.github.io/guess-the-number");
-}
 </script>
-<p id="s"></p>
 <button onclick="go()" value="Play Again">Play Again</button>

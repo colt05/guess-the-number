@@ -1,13 +1,17 @@
 <title>Restart Game</title>
 <script>
 function g() {
-if (window.localStorage.getItem("n") == null && window.localStorage.getItem("g") == null){
-} else {
-  if (window.localStorage.getItem("g") == 1){
-  document.getElementById("s").innerHTML = "You guessed the number ".window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guess!");
-    } else {
-    document.getElementById("s").innerHTML = "You guessed the number ".window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guesses!");
+try{
+  if (window.localStorage.getItem("n") == null && window.localStorage.getItem("g") == null){
+  } else {
+    if (window.localStorage.getItem("g") == 1){
+        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guess!"));
+      } else {
+        document.getElementById("s").innerHTML = "You guessed the number ".concat(window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guesses!"));
     }
+  }
+  } catch(err) {
+  console.log(err);
   }
 }
 g()

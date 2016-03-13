@@ -1,7 +1,19 @@
 <title>Restart Game</title>
 <script>
+function g() {
+try{
+if (window.localStorage.getItem("n") == null && window.localStorage.getItem("g") == null){
+} else {
+  if (window.localStorage.getItem("g") == 1){
+  document.getElementById("s").innerHTML = "You guessed the number ".window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guess!");
+  } else {
+    document.getElementById("s").innerHTML = "You guessed the number ".window.localStorage.getItem("n").concat(" in ").window.localStorage.getItem("g").concat(" guesses!");
+  }
+}
+}
 function go() {
   window.location.assign("http://colt05.github.io/guess-the-number");
 }
 </script>
+<p id="s"></p>
 <button onclick="go()" value="Play Again">Play Again</button>

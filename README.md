@@ -11,6 +11,8 @@ http://diveintohtml5.info/storage.html
 https://modernizr.com/  
 http://www.sitepoint.com/build-svg-icons/  
 http://www.sitepoint.com/create-an-icon-font-illustrator-icomoon/
-https://icomoon.io/
+https://icomoon.io/  
+https://inkscape.org/en/  
+http://askubuntu.com/questions/301540/export-image-as-svg-in-gimp  
 Google Chrome Developer Tools  
 https://scratch.mit.edu/projects/100289477/  

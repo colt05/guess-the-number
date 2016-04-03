@@ -15,5 +15,6 @@ https://icomoon.io/
 https://inkscape.org/en/  
 http://askubuntu.com/questions/301540/export-image-as-svg-in-gimp  
 http://stackoverflow.com/questions/11059803/how-to-create-a-new-web-character-symbol-recognizable-by-html-javascript  
+https://octicons.github.com/  
 Google Chrome Developer Tools  
 https://scratch.mit.edu/projects/100289477/  

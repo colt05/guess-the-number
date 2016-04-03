@@ -9,5 +9,6 @@ http://www.textfixer.com/tutorials/javascript-line-breaks.php
 http://stackoverflow.com/questions/11609376/passing-data-between-html-pages  
 http://diveintohtml5.info/storage.html  
 https://modernizr.com/  
+http://www.sitepoint.com/build-svg-icons/  
 Google Chrome Developer Tools  
 https://scratch.mit.edu/projects/100289477/  

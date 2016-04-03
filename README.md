@@ -10,5 +10,7 @@ http://stackoverflow.com/questions/11609376/passing-data-between-html-pages
 http://diveintohtml5.info/storage.html  
 https://modernizr.com/  
 http://www.sitepoint.com/build-svg-icons/  
+http://www.sitepoint.com/create-an-icon-font-illustrator-icomoon/
+https://icomoon.io/
 Google Chrome Developer Tools  
 https://scratch.mit.edu/projects/100289477/  

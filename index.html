@@ -1,4 +1,5 @@
 <script src="https://cdn.rawgit.com/colt05/guess-the-number/gh-pages/modernizr-custom.js"></script>
+<script src="https://cdn.rawgit.com/colt05/get-request/master/get.js"></script>
 <script>
 var n = 0;
 var game = false;
@@ -56,11 +57,11 @@ function guessForm() {
 }
 function startGame(min, max) {
   var response = "0";
-  var xmlHttp = new XMLHttpRequest();
-  url = "https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max).concat("&col=1&base=10&format=plain&rnd=new");
-  xmlHttp.open( "GET", url, false );
-  xmlHttp.send( null );
-  response = xmlHttp.responseText;
+  //var xmlHttp = new XMLHttpRequest();
+  response = httpget("https://www.random.org/integers/?num=1&min=".concat(min).concat("&max=").concat(max).concat("&col=1&base=10&format=plain&rnd=new"));
+  //xmlHttp.open( "GET", url, false );
+  //xmlHttp.send( null );
+  //response = xmlHttp.responseText;
   n = response;
   n = n.replace(/(\r\n|\n|\r)/gm,"");
   game = true;
